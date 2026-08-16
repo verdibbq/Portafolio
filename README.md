@@ -26,9 +26,3 @@ Primera versión del portafolio personal de Agustín.
 - `index.html`
 - `css/styles.css`
 
-## Commit sugerido
-
-`feat: crear estructura inicial del portafolio`
-
-Antes de subirlo, abrí `index.html` con Live Server y comprobá que los enlaces
-del menú lleven a cada sección.
