@@ -1,21 +1,20 @@
-# Verdi.Code — Día 2
+# Verdi.Code — Día 3
 
-Segunda versión del portafolio personal de Agustín.
+Tercera versión del portafolio personal de Agustín.
 
-## Qué se agregó
+## Qué se agregó en esta versión
 
-- Logo oficial de Verdi.Code en la navegación.
-- Paleta violeta, naranja y tonos oscuros mediante variables CSS.
-- Tipografías del sistema, jerarquía de títulos y espaciado general.
-- Primer diseño del hero y un detalle visual temporal para la marca.
-- Botones, tarjetas, secciones alternativas y footer.
-- Estados `hover`, selección de texto y foco visible.
-- Una adaptación básica para evitar que el contenido se rompa en pantallas angostas.
+- Menú hamburguesa para celular y tablet.
+- JavaScript básico para abrir y cerrar la navegación.
+- Cierre del menú al elegir una sección, presionar Escape o volver a escritorio.
+- Adaptación completa de columnas, tarjetas, botones y tipografías.
+- Ajustes específicos para tablet y celulares pequeños.
+- Correcciones de desbordamiento en enlaces y textos largos.
+- Mejoras de foco, tamaños táctiles y reducción de movimiento.
+- Pequeños estados visuales en tarjetas y botones.
 
 ## Qué todavía no incluye
 
-- Menú desplegable para celular.
-- JavaScript.
 - Calculadora funcional.
 - Capturas de los proyectos.
 - Animaciones avanzadas.
@@ -38,22 +37,21 @@ Los colores están centralizados dentro de `:root` al principio de `css/styles.c
 - `css/styles.css`
 - `README.md`
 
-## Archivo agregado
+## Archivo agregado en esta versión
 
-- `assets/images/verdi-code-logo.png`
+- `js/main.js`
 
 ## Qué personalizar
 
 - Podés cambiar los colores editando las variables de `:root`.
-- El bloque `.detalle-inicio` es temporal y más adelante podrá reemplazarse por el personaje relacionado con el zorro.
+- El bloque `.detalle-inicio` sigue siendo temporal y más adelante podrá reemplazarse por el personaje relacionado con el zorro.
 - Revisá los textos y enlaces antes de publicar.
 
 ## Qué probar
 
 - Abrí `index.html` con Live Server.
-- Comprobá que el logo se vea completo en la navegación.
-- Probá los enlaces del menú y los botones del hero.
-- Revisá que violeta y naranja tengan buen contraste sobre el fondo oscuro.
-- Reducí el ancho del navegador para comprobar que las columnas se apilen.
-
+- Probá el menú entre 320 px y 950 px de ancho.
+- Confirmá que se cierre al tocar un enlace y al presionar Escape.
+- Revisá la página en celular, tablet y escritorio.
+- Comprobá que ningún texto, tarjeta o botón se salga de la pantalla.
 

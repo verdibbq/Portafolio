@@ -11,6 +11,7 @@
     <title>Verdi.Code | Portafolio de Agustín</title>
     <link rel="icon" type="image/png" href="assets/images/verdi-code-logo.png">
     <link rel="stylesheet" href="css/styles.css">
+    <script src="js/main.js" defer></script>
   </head>
 
   <body>
@@ -20,7 +21,24 @@
           <img class="marca-logo" src="assets/images/verdi-code-logo.png" alt="Verdi.Code">
         </a>
 
-        <nav class="navegacion-principal" aria-label="Navegación principal">
+        <button
+          class="boton-menu"
+          type="button"
+          aria-expanded="false"
+          aria-controls="navegacion-principal"
+          aria-label="Abrir menú de navegación"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <nav
+          id="navegacion-principal"
+          class="navegacion-principal"
+          aria-label="Navegación principal"
+          data-abierto="false"
+        >
           <ul>
             <li><a href="#sobre-mi">Sobre mí</a></li>
             <li><a href="#servicios">Servicios</a></li>
