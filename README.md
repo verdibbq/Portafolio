@@ -1,6 +1,6 @@
-# Verdi.Code — Día 3
+# Verdi.Code — Día 4
 
-Tercera versión del portafolio personal de Agustín.
+cuarta versión del portafolio personal de Agustín.
 
 ## Qué se agregó en esta versión
 
