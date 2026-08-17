@@ -56,6 +56,4 @@ Los colores están centralizados dentro de `:root` al principio de `css/styles.c
 - Revisá que violeta y naranja tengan buen contraste sobre el fondo oscuro.
 - Reducí el ancho del navegador para comprobar que las columnas se apilen.
 
-## Commit sugerido
 
-`feat: agregar identidad visual y estilos principales`
