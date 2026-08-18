@@ -258,7 +258,13 @@ h3 {
   justify-content: center;
   border: 1px solid transparent;
   border-radius: 12px;
+<<<<<<< HEAD
   font-weight: 800;
+=======
+  font-family: inherit;
+  font-weight: 800;
+  cursor: pointer;
+>>>>>>> 0fc7740 (agregar filtros y formulario de contacto interactivo)
   transition: border-color 160ms ease, background 160ms ease, color 160ms ease;
 }
 
@@ -349,32 +355,74 @@ h3 {
 
 .seccion h2 {
   max-width: 760px;
+<<<<<<< HEAD
   margin-bottom: 42px;
+=======
+  margin-bottom: 0;
+>>>>>>> 0fc7740 (agregar filtros y formulario de contacto interactivo)
   font-size: clamp(2.5rem, 5vw, 4.5rem);
   letter-spacing: -0.055em;
 }
 
+<<<<<<< HEAD
+=======
+.encabezado-seccion {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(260px, 0.75fr);
+  align-items: end;
+  gap: 60px;
+  margin-bottom: 44px;
+}
+
+.encabezado-seccion > p {
+  max-width: 470px;
+  margin-bottom: 5px;
+  color: var(--texto-suave);
+}
+
+>>>>>>> 0fc7740 (agregar filtros y formulario de contacto interactivo)
 .dos-columnas {
   display: grid;
   grid-template-columns: 1.15fr 0.85fr;
   gap: 64px;
 }
 
+<<<<<<< HEAD
 .dos-columnas p,
 .bloque-cotizacion > p,
 #contacto > .contenedor > p {
+=======
+.texto-sobre-mi {
+  max-width: 650px;
+  font-size: 1.08rem;
+}
+
+.dos-columnas p,
+.bloque-cotizacion p,
+.bloque-contacto > div > p {
+>>>>>>> 0fc7740 (agregar filtros y formulario de contacto interactivo)
   color: var(--texto-suave);
 }
 
 .datos-personales,
+<<<<<<< HEAD
 .lista-proceso {
+=======
+.lista-proceso,
+.lista-detalles,
+.etiquetas-proyecto {
+>>>>>>> 0fc7740 (agregar filtros y formulario de contacto interactivo)
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
+<<<<<<< HEAD
 .datos-personales li,
 .lista-proceso li {
+=======
+.datos-personales li {
+>>>>>>> 0fc7740 (agregar filtros y formulario de contacto interactivo)
   margin-bottom: 12px;
   padding: 18px 20px;
   border: 1px solid var(--borde);
@@ -382,8 +430,12 @@ h3 {
   background: var(--superficie);
 }
 
+<<<<<<< HEAD
 .datos-personales strong,
 .lista-proceso strong {
+=======
+.datos-personales strong {
+>>>>>>> 0fc7740 (agregar filtros y formulario de contacto interactivo)
   color: var(--naranja-claro);
 }
 
@@ -394,6 +446,7 @@ h3 {
   gap: 18px;
 }
 
+<<<<<<< HEAD
 .tres-columnas,
 .cuadricula-proyectos {
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -401,6 +454,14 @@ h3 {
 
 .tarjeta,
 .tarjeta-proyecto {
+=======
+.tres-columnas {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.tarjeta {
+  position: relative;
+>>>>>>> 0fc7740 (agregar filtros y formulario de contacto interactivo)
   min-height: 200px;
   padding: 28px;
   border: 1px solid var(--borde);
@@ -409,12 +470,17 @@ h3 {
   transition: border-color 180ms ease, transform 180ms ease;
 }
 
+<<<<<<< HEAD
 .tarjeta h3,
 .tarjeta-proyecto h3 {
+=======
+.tarjeta h3 {
+>>>>>>> 0fc7740 (agregar filtros y formulario de contacto interactivo)
   margin-bottom: 12px;
   font-size: 1.55rem;
 }
 
+<<<<<<< HEAD
 .tarjeta p,
 .tarjeta-proyecto p {
   color: var(--texto-suave);
@@ -430,10 +496,217 @@ h3 {
 
 .tarjeta-proyecto a,
 #contacto p a {
+=======
+.tarjeta p {
+  color: var(--texto-suave);
+}
+
+.tarjeta-habilidad {
+  min-height: 230px;
+  padding-top: 74px;
+}
+
+.numero-tarjeta {
+  position: absolute;
+  top: 24px;
+  left: 28px;
+  color: var(--naranja-claro);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+}
+
+.tarjeta-habilidad::after {
+  position: absolute;
+  top: 30px;
+  right: 28px;
+  width: 42px;
+  height: 1px;
+  background: var(--violeta-claro);
+  content: "";
+}
+
+.tarjeta-servicio {
+  min-height: 360px;
+}
+
+.icono-servicio {
+  display: grid;
+  width: 50px;
+  height: 50px;
+  margin-bottom: 38px;
+  place-items: center;
+  border: 1px solid rgba(185, 160, 255, 0.35);
+  border-radius: 14px;
+  background: rgba(139, 92, 246, 0.1);
+  color: var(--violeta-claro);
+  font-size: 1.45rem;
+  font-weight: 800;
+}
+
+.lista-detalles {
+  display: grid;
+  gap: 7px;
+  margin-top: 22px;
+  color: var(--texto-suave);
+  font-size: 0.9rem;
+}
+
+.lista-detalles li::before {
+  margin-right: 9px;
+  color: var(--naranja-claro);
+  content: "•";
+}
+
+.barra-filtros {
+  display: flex;
+  margin-bottom: 26px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.filtros-proyectos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.filtro-proyecto {
+  min-height: 42px;
+  padding: 9px 16px;
+  border: 1px solid var(--borde);
+  border-radius: 999px;
+  background: var(--superficie);
+  color: var(--texto-suave);
+  font-family: inherit;
+  font-weight: 800;
+  cursor: pointer;
+  transition: border-color 160ms ease, background 160ms ease, color 160ms ease;
+}
+
+.filtro-proyecto:hover {
+  border-color: var(--violeta-claro);
+  color: var(--texto);
+}
+
+.filtro-proyecto.activo {
+  border-color: var(--violeta);
+  background: var(--violeta);
+  color: #fff;
+}
+
+.resultado-filtros {
+  margin: 0;
+  flex-shrink: 0;
+  color: var(--texto-suave);
+  font-size: 0.82rem;
+}
+
+.cuadricula-proyectos {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.tarjeta-proyecto[hidden] {
+  display: none;
+}
+
+.tarjeta-proyecto {
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid var(--borde);
+  border-radius: var(--radio-grande);
+  background: var(--superficie);
+  transition: border-color 180ms ease, transform 180ms ease;
+}
+
+.tarjeta-proyecto-destacado {
+  display: grid;
+  grid-column: 1 / -1;
+  grid-template-columns: minmax(0, 1.1fr) minmax(320px, 0.9fr);
+}
+
+.vista-proyecto {
+  position: relative;
+  display: block;
+  min-height: 285px;
+  overflow: hidden;
+  background: #f5f1e9;
+}
+
+.tarjeta-proyecto:not(.tarjeta-proyecto-destacado) .vista-proyecto {
+  min-height: 0;
+  aspect-ratio: 16 / 9;
+}
+
+.tarjeta-proyecto-destacado .vista-proyecto {
+  min-height: 360px;
+}
+
+.vista-proyecto img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  transition: transform 250ms ease;
+}
+
+.contenido-proyecto {
+  padding: 30px;
+}
+
+.tarjeta-proyecto-destacado .contenido-proyecto {
+  display: flex;
+  padding: 42px;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.contenido-proyecto h3 {
+  margin-bottom: 14px;
+  font-size: 1.75rem;
+}
+
+.contenido-proyecto > p:not(.tipo-proyecto) {
+  color: var(--texto-suave);
+}
+
+.tipo-proyecto {
+  margin-bottom: 10px;
+  color: var(--naranja-claro);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.etiquetas-proyecto {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 22px 0;
+}
+
+.etiquetas-proyecto li {
+  padding: 5px 10px;
+  border: 1px solid var(--borde);
+  border-radius: 999px;
+  color: var(--texto-suave);
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.enlace-proyecto {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+>>>>>>> 0fc7740 (agregar filtros y formulario de contacto interactivo)
   color: var(--violeta-claro);
   font-weight: 800;
 }
 
+<<<<<<< HEAD
 .tarjeta-proyecto a:hover,
 #contacto p a:hover {
   color: var(--naranja-claro);
@@ -442,6 +715,63 @@ h3 {
 .bloque-cotizacion {
   max-width: 760px;
   padding: 44px;
+=======
+.enlace-proyecto:hover {
+  color: var(--naranja-claro);
+}
+
+.proyecto-fletesya {
+  box-shadow: inset 0 3px 0 #df4545;
+}
+
+.proyecto-saludweb {
+  box-shadow: inset 0 3px 0 #e98dcc;
+}
+
+.lista-proceso {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+  counter-reset: paso;
+}
+
+.lista-proceso li {
+  min-width: 0;
+  min-height: 250px;
+  padding: 24px;
+  border: 1px solid var(--borde);
+  border-radius: var(--radio-medio);
+  background: var(--superficie);
+}
+
+.lista-proceso li > span {
+  display: block;
+  margin-bottom: 56px;
+  color: var(--naranja-claro);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+}
+
+.lista-proceso strong {
+  color: var(--texto);
+  font-size: 1.08rem;
+}
+
+.lista-proceso p {
+  margin: 10px 0 0;
+  color: var(--texto-suave);
+  font-size: 0.9rem;
+}
+
+.bloque-cotizacion {
+  display: flex;
+  max-width: var(--ancho);
+  padding: 44px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+>>>>>>> 0fc7740 (agregar filtros y formulario de contacto interactivo)
   border: 1px solid var(--borde);
   border-radius: var(--radio-grande);
   background: linear-gradient(135deg, var(--superficie), rgba(139, 92, 246, 0.13));
@@ -451,8 +781,135 @@ h3 {
   margin-bottom: 20px;
 }
 
+<<<<<<< HEAD
 #contacto .boton {
   margin-top: 12px;
+=======
+.bloque-cotizacion p:last-child {
+  max-width: 650px;
+  margin-bottom: 0;
+}
+
+.estado-cotizacion {
+  flex-shrink: 0;
+  padding: 10px 16px;
+  border: 1px solid rgba(240, 130, 63, 0.4);
+  border-radius: 999px;
+  background: rgba(240, 130, 63, 0.08);
+  color: var(--naranja-claro);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.bloque-contacto {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(360px, 1.1fr);
+  align-items: start;
+  gap: 70px;
+}
+
+.bloque-contacto h2 {
+  margin-bottom: 24px;
+}
+
+.informacion-contacto > p {
+  max-width: 650px;
+  color: var(--texto-suave);
+}
+
+.acciones-contacto {
+  display: flex;
+  margin-top: 32px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.enlace-github {
+  display: inline-flex;
+  width: 100%;
+  margin-top: 6px;
+  color: var(--violeta-claro);
+  font-weight: 800;
+}
+
+.enlace-github:hover {
+  color: var(--naranja-claro);
+}
+
+.acciones-contacto .mensaje-copia {
+  width: 100%;
+  margin: 0;
+  color: var(--texto-suave);
+  font-size: 0.88rem;
+  overflow-wrap: anywhere;
+}
+
+.formulario-contacto {
+  display: grid;
+  gap: 20px;
+  padding: 32px;
+  border: 1px solid var(--borde);
+  border-radius: var(--radio-grande);
+  background: var(--superficie);
+}
+
+.campo-formulario {
+  display: grid;
+  gap: 8px;
+}
+
+.campo-formulario label {
+  color: var(--texto);
+  font-size: 0.86rem;
+  font-weight: 800;
+}
+
+.campo-formulario input,
+.campo-formulario textarea {
+  width: 100%;
+  padding: 13px 14px;
+  border: 1px solid var(--borde);
+  border-radius: 11px;
+  background: var(--fondo-secundario);
+  color: var(--texto);
+  font: inherit;
+}
+
+.campo-formulario textarea {
+  min-height: 130px;
+  resize: vertical;
+}
+
+.campo-formulario input:hover,
+.campo-formulario textarea:hover {
+  border-color: rgba(185, 160, 255, 0.5);
+}
+
+.campo-formulario input:focus,
+.campo-formulario textarea:focus {
+  border-color: var(--violeta-claro);
+  outline: 3px solid rgba(139, 92, 246, 0.18);
+}
+
+.formulario-contacto.formulario-revisado input:invalid,
+.formulario-contacto.formulario-revisado textarea:invalid {
+  border-color: var(--naranja);
+}
+
+.ayuda-formulario,
+.mensaje-formulario {
+  margin: 0;
+  color: var(--texto-suave);
+  font-size: 0.8rem;
+}
+
+.mensaje-formulario {
+  min-height: 1.3em;
+  color: var(--naranja-claro);
+  font-weight: 700;
+>>>>>>> 0fc7740 (agregar filtros y formulario de contacto interactivo)
 }
 
 .pie-pagina {
@@ -469,12 +926,35 @@ h3 {
   color: var(--violeta-claro);
 }
 
+<<<<<<< HEAD
+=======
+.contenido-pie {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.contenido-pie a {
+  color: var(--texto);
+  font-size: 0.88rem;
+  font-weight: 800;
+}
+
+>>>>>>> 0fc7740 (agregar filtros y formulario de contacto interactivo)
 @media (hover: hover) {
   .tarjeta:hover,
   .tarjeta-proyecto:hover {
     border-color: rgba(185, 160, 255, 0.45);
     transform: translateY(-4px);
   }
+<<<<<<< HEAD
+=======
+
+  .vista-proyecto:hover img {
+    transform: scale(1.025);
+  }
+>>>>>>> 0fc7740 (agregar filtros y formulario de contacto interactivo)
 }
 
 @media (max-width: 950px) {
@@ -529,21 +1009,44 @@ h3 {
   .navegacion-principal a:focus-visible {
     background: var(--superficie-clara);
   }
+<<<<<<< HEAD
+=======
+
+  .lista-proceso {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+>>>>>>> 0fc7740 (agregar filtros y formulario de contacto interactivo)
 }
 
 @media (max-width: 850px) {
   .inicio-contenido,
   .dos-columnas,
+<<<<<<< HEAD
   .cuadricula-tarjetas,
   .tres-columnas,
   .cuadricula-proyectos {
+=======
+  .encabezado-seccion,
+  .cuadricula-tarjetas,
+  .tres-columnas,
+  .cuadricula-proyectos,
+  .tarjeta-proyecto-destacado,
+  .bloque-contacto {
+>>>>>>> 0fc7740 (agregar filtros y formulario de contacto interactivo)
     grid-template-columns: minmax(0, 1fr);
   }
 
   .inicio-contenido > *,
   .dos-columnas > *,
+<<<<<<< HEAD
   .cuadricula-tarjetas > *,
   .cuadricula-proyectos > * {
+=======
+  .encabezado-seccion > *,
+  .cuadricula-tarjetas > *,
+  .cuadricula-proyectos > *,
+  .bloque-contacto > * {
+>>>>>>> 0fc7740 (agregar filtros y formulario de contacto interactivo)
     min-width: 0;
   }
 
@@ -568,6 +1071,7 @@ h3 {
     gap: 36px;
   }
 
+<<<<<<< HEAD
   .tarjeta,
   .tarjeta-proyecto {
     min-height: auto;
@@ -575,6 +1079,33 @@ h3 {
 
   #contacto p a {
     overflow-wrap: anywhere;
+=======
+  .encabezado-seccion {
+    align-items: start;
+    gap: 22px;
+  }
+
+  .encabezado-seccion > p {
+    max-width: 650px;
+  }
+
+  .tarjeta {
+    min-height: auto;
+  }
+
+  .tarjeta-proyecto-destacado .vista-proyecto {
+    min-height: 310px;
+  }
+
+  .bloque-cotizacion {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .bloque-contacto {
+    align-items: start;
+    gap: 36px;
+>>>>>>> 0fc7740 (agregar filtros y formulario de contacto interactivo)
   }
 }
 
@@ -645,11 +1176,64 @@ h3 {
     letter-spacing: -0.04em;
   }
 
+<<<<<<< HEAD
   .tarjeta,
   .tarjeta-proyecto {
     padding: 22px;
   }
 
+=======
+  .encabezado-seccion {
+    margin-bottom: 32px;
+  }
+
+  .encabezado-seccion h2 {
+    margin-bottom: 0;
+  }
+
+  .barra-filtros {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .tarjeta {
+    padding: 22px;
+  }
+
+  .tarjeta-habilidad {
+    padding-top: 70px;
+  }
+
+  .tarjeta-servicio {
+    padding-top: 22px;
+  }
+
+  .vista-proyecto {
+    min-height: 210px;
+  }
+
+  .tarjeta-proyecto-destacado .vista-proyecto {
+    min-height: 230px;
+  }
+
+  .contenido-proyecto,
+  .tarjeta-proyecto-destacado .contenido-proyecto {
+    padding: 24px;
+  }
+
+  .lista-proceso {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .lista-proceso li {
+    min-height: auto;
+  }
+
+  .lista-proceso li > span {
+    margin-bottom: 28px;
+  }
+
+>>>>>>> 0fc7740 (agregar filtros y formulario de contacto interactivo)
   .datos-personales li,
   .lista-proceso li {
     padding: 16px;
@@ -659,10 +1243,29 @@ h3 {
     padding: 28px;
   }
 
+<<<<<<< HEAD
+=======
+  .estado-cotizacion {
+    white-space: normal;
+  }
+
+  .formulario-contacto {
+    padding: 22px;
+  }
+
+>>>>>>> 0fc7740 (agregar filtros y formulario de contacto interactivo)
   .pie-pagina {
     padding: 28px 0;
     text-align: center;
   }
+<<<<<<< HEAD
+=======
+
+  .contenido-pie {
+    flex-direction: column;
+    gap: 10px;
+  }
+>>>>>>> 0fc7740 (agregar filtros y formulario de contacto interactivo)
 }
 
 @media (prefers-reduced-motion: reduce) {
