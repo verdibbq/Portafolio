@@ -60,6 +60,3 @@ mensaje ya preparados.
 - Probá el formulario y los filtros en celular, tablet y escritorio.
 - Navegá por los controles usando la tecla Tab.
 
-## Commit sugerido
-
-`feat: agregar filtros y formulario de contacto interactivo`

@@ -2,8 +2,11 @@ const botonMenu = document.querySelector(".boton-menu");
 const navegacion = document.querySelector(".navegacion-principal");
 const enlacesMenu = document.querySelectorAll(".navegacion-principal a");
 
+<<<<<<< HEAD
 // Menú responsive
 
+=======
+>>>>>>> 7640081c908094b6ec3a008d76d8eb73bcbeb761
 function cerrarMenu() {
   botonMenu.setAttribute("aria-expanded", "false");
   botonMenu.setAttribute("aria-label", "Abrir menú de navegación");
@@ -44,6 +47,7 @@ window.addEventListener("resize", () => {
     cerrarMenu();
   }
 });
+<<<<<<< HEAD
 
 // Filtros de proyectos
 const botonesFiltro = document.querySelectorAll(".filtro-proyecto");
@@ -124,3 +128,5 @@ formularioContacto.addEventListener("submit", (evento) => {
   mensajeFormulario.textContent = "Abriendo tu aplicación de correo...";
   window.location.href = `mailto:verdicodesoporte@gmail.com?subject=${asunto}&body=${cuerpo}`;
 });
+=======
+>>>>>>> 7640081c908094b6ec3a008d76d8eb73bcbeb761
