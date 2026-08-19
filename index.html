@@ -48,6 +48,9 @@
           </ul>
         </nav>
       </div>
+      <div class="progreso-pagina" aria-hidden="true">
+        <span id="barra-progreso"></span>
+      </div>
     </header>
 
     <main>
@@ -76,10 +79,18 @@
 
       <section id="sobre-mi" class="seccion">
         <div class="contenedor">
-          <p class="etiqueta">01 · Sobre mí</p>
-          <h2>La persona detrás de Verdi.Code.</h2>
-          <div class="dos-columnas">
+          <div class="encabezado-seccion">
             <div>
+              <p class="etiqueta">01 · Sobre mí</p>
+              <h2>La persona detrás de Verdi.Code.</h2>
+            </div>
+            <p>
+              Un servicio cercano, con comunicación directa y decisiones claras
+              durante todo el proyecto.
+            </p>
+          </div>
+          <div class="dos-columnas">
+            <div class="texto-sobre-mi">
               <p>
                 Verdi.Code no es una empresa grande: soy yo, Agustín, trabajando
                 de manera directa en cada proyecto.
@@ -101,22 +112,34 @@
 
       <section id="habilidades" class="seccion seccion-alternativa">
         <div class="contenedor">
-          <p class="etiqueta">02 · Herramientas</p>
-          <h2>Tecnologías que utilizo.</h2>
+          <div class="encabezado-seccion">
+            <div>
+              <p class="etiqueta">02 · Herramientas</p>
+              <h2>Tecnologías que utilizo.</h2>
+            </div>
+            <p>
+              Una base front-end enfocada en crear sitios ordenados, adaptables
+              y fáciles de mantener.
+            </p>
+          </div>
           <div class="cuadricula-tarjetas">
-            <article class="tarjeta">
+            <article class="tarjeta tarjeta-habilidad">
+              <span class="numero-tarjeta">01</span>
               <h3>HTML</h3>
               <p>Estructuras semánticas y contenido accesible.</p>
             </article>
-            <article class="tarjeta">
+            <article class="tarjeta tarjeta-habilidad">
+              <span class="numero-tarjeta">02</span>
               <h3>CSS</h3>
               <p>Diseño visual, Flexbox, Grid y responsive.</p>
             </article>
-            <article class="tarjeta">
+            <article class="tarjeta tarjeta-habilidad">
+              <span class="numero-tarjeta">03</span>
               <h3>JavaScript</h3>
               <p>Interacciones y comportamiento dinámico.</p>
             </article>
-            <article class="tarjeta">
+            <article class="tarjeta tarjeta-habilidad">
+              <span class="numero-tarjeta">04</span>
               <h3>Git y GitHub</h3>
               <p>Versionado y publicación de proyectos.</p>
             </article>
@@ -126,20 +149,46 @@
 
       <section id="servicios" class="seccion">
         <div class="contenedor">
-          <p class="etiqueta">03 · Servicios</p>
-          <h2>Cómo puedo ayudarte.</h2>
+          <div class="encabezado-seccion">
+            <div>
+              <p class="etiqueta">03 · Servicios</p>
+              <h2>Cómo puedo ayudarte.</h2>
+            </div>
+            <p>
+              Propuestas pensadas para profesionales y emprendimientos que
+              necesitan comenzar o mejorar su presencia online.
+            </p>
+          </div>
           <div class="cuadricula-tarjetas tres-columnas">
-            <article class="tarjeta">
+            <article class="tarjeta tarjeta-servicio">
+              <span class="icono-servicio" aria-hidden="true">↗</span>
               <h3>Landing page</h3>
               <p>Una página enfocada en presentar un producto o servicio.</p>
+              <ul class="lista-detalles">
+                <li>Mensaje principal claro</li>
+                <li>Secciones a medida</li>
+                <li>Llamados a la acción</li>
+              </ul>
             </article>
-            <article class="tarjeta">
+            <article class="tarjeta tarjeta-servicio">
+              <span class="icono-servicio" aria-hidden="true">◇</span>
               <h3>Web de presentación</h3>
               <p>Un espacio para contar quién sos y mostrar lo que ofrecés.</p>
+              <ul class="lista-detalles">
+                <li>Identidad personalizada</li>
+                <li>Servicios y contacto</li>
+                <li>Diseño responsive</li>
+              </ul>
             </article>
-            <article class="tarjeta">
+            <article class="tarjeta tarjeta-servicio">
+              <span class="icono-servicio" aria-hidden="true">+</span>
               <h3>Mejoras web</h3>
               <p>Ajustes de diseño, contenido y adaptación responsive.</p>
+              <ul class="lista-detalles">
+                <li>Revisión visual</li>
+                <li>Orden del contenido</li>
+                <li>Ajustes para celulares</li>
+              </ul>
             </article>
           </div>
         </div>
@@ -147,26 +196,93 @@
 
       <section id="proyectos" class="seccion seccion-alternativa">
         <div class="contenedor">
-          <p class="etiqueta">04 · Proyectos</p>
-          <h2>Trabajos y maquetas funcionales.</h2>
+          <div class="encabezado-seccion">
+            <div>
+              <p class="etiqueta">04 · Proyectos</p>
+              <h2>Trabajos y maquetas funcionales.</h2>
+            </div>
+            <p>
+              Proyectos donde trabajé el diseño, el desarrollo, las imágenes y
+              el contenido para practicar soluciones distintas.
+            </p>
+          </div>
+
+          <div class="barra-filtros">
+            <div class="filtros-proyectos" aria-label="Filtrar proyectos">
+              <button class="filtro-proyecto activo" type="button" data-filtro="todos" aria-pressed="true">Todos</button>
+              <button class="filtro-proyecto" type="button" data-filtro="real" aria-pressed="false">Proyecto real</button>
+              <button class="filtro-proyecto" type="button" data-filtro="maqueta" aria-pressed="false">Maquetas</button>
+            </div>
+            <p id="resultado-filtros" class="resultado-filtros" aria-live="polite">3 proyectos visibles</p>
+          </div>
+
           <div class="cuadricula-proyectos">
-            <article class="tarjeta-proyecto">
-              <p>Proyecto real · Minecraft</p>
-              <h3>Maddi Server</h3>
-              <p>Página de presentación para un servidor de Minecraft.</p>
-              <a href="https://verdibbq.github.io/maddi-sv-/" target="_blank" rel="noopener noreferrer">Visitar proyecto</a>
+            <article class="tarjeta-proyecto tarjeta-proyecto-destacado" data-categoria="real">
+              <a class="vista-proyecto" href="https://verdibbq.github.io/maddi-sv-/" target="_blank" rel="noopener noreferrer" aria-label="Abrir el proyecto Maddi Server">
+                <img src="assets/images/maddi-server.webp" alt="Vista previa de la página de Maddi Server">
+              </a>
+              <div class="contenido-proyecto">
+                <p class="tipo-proyecto">Proyecto real · Minecraft</p>
+                <h3>Maddi Server</h3>
+                <p>
+                  Página de presentación para un servidor de Minecraft, con
+                  información de juego, comunidad y acceso al servidor.
+                </p>
+                <ul class="etiquetas-proyecto" aria-label="Tecnologías utilizadas">
+                  <li>HTML</li>
+                  <li>CSS</li>
+                  <li>Responsive</li>
+                </ul>
+                <a class="enlace-proyecto" href="https://verdibbq.github.io/maddi-sv-/" target="_blank" rel="noopener noreferrer">
+                  Visitar proyecto <span aria-hidden="true">↗</span>
+                </a>
+              </div>
             </article>
-            <article class="tarjeta-proyecto">
-              <p>Maqueta funcional · Transporte</p>
-              <h3>FletesYA</h3>
-              <p>Página de fletes con un formulario de cotización.</p>
-              <a href="https://verdibbq.github.io/FletesAddi/" target="_blank" rel="noopener noreferrer">Visitar proyecto</a>
+
+            <article class="tarjeta-proyecto proyecto-fletesya" data-categoria="maqueta">
+              <a class="vista-proyecto" href="https://verdibbq.github.io/FletesAddi/" target="_blank" rel="noopener noreferrer" aria-label="Abrir el proyecto FletesYA">
+                <img src="assets/images/fletesya.png" alt="Vista previa de la página FletesYA">
+              </a>
+              <div class="contenido-proyecto">
+                <p class="tipo-proyecto">Maqueta funcional · Transporte</p>
+                <h3>FletesYA</h3>
+                <p>
+                  Sitio de servicios de transporte con opciones de flete y un
+                  formulario para calcular una cotización orientativa.
+                </p>
+                <ul class="etiquetas-proyecto" aria-label="Tecnologías utilizadas">
+                  <li>HTML</li>
+                  <li>CSS</li>
+                  <li>JavaScript</li>
+                  <li>Autoría</li>
+                </ul>
+                <a class="enlace-proyecto" href="https://verdibbq.github.io/FletesAddi/" target="_blank" rel="noopener noreferrer">
+                  Visitar proyecto <span aria-hidden="true">↗</span>
+                </a>
+              </div>
             </article>
-            <article class="tarjeta-proyecto">
-              <p>Maqueta funcional · Salud</p>
-              <h3>SaludWeb</h3>
-              <p>Página informativa sobre psicología y salud.</p>
-              <a href="https://verdibbq.github.io/Psicologia/" target="_blank" rel="noopener noreferrer">Visitar proyecto</a>
+
+            <article class="tarjeta-proyecto proyecto-saludweb" data-categoria="maqueta">
+              <a class="vista-proyecto" href="https://verdibbq.github.io/Psicologia/" target="_blank" rel="noopener noreferrer" aria-label="Abrir el proyecto SaludWeb">
+                <img src="assets/images/saludweb.png" alt="Vista previa de la página SaludWeb">
+              </a>
+              <div class="contenido-proyecto">
+                <p class="tipo-proyecto">Maqueta funcional · Salud</p>
+                <h3>SaludWeb</h3>
+                <p>
+                  Página de psicología y bienestar con una estética tranquila,
+                  servicios destacados y llamados a la acción.
+                </p>
+                <ul class="etiquetas-proyecto" aria-label="Tecnologías utilizadas">
+                  <li>HTML</li>
+                  <li>CSS</li>
+                  <li>Responsive</li>
+                  <li>Autoría</li>
+                </ul>
+                <a class="enlace-proyecto" href="https://verdibbq.github.io/Psicologia/" target="_blank" rel="noopener noreferrer">
+                  Visitar proyecto <span aria-hidden="true">↗</span>
+                </a>
+              </div>
             </article>
           </div>
         </div>
@@ -174,45 +290,216 @@
 
       <section id="proceso" class="seccion">
         <div class="contenedor">
-          <p class="etiqueta">05 · Proceso</p>
-          <h2>Cómo trabajo.</h2>
+          <div class="encabezado-seccion">
+            <div>
+              <p class="etiqueta">05 · Proceso</p>
+              <h2>Cómo trabajo.</h2>
+            </div>
+            <p>
+              Un recorrido simple para entender la idea, ordenar el trabajo y
+              llegar a una página lista para compartir.
+            </p>
+          </div>
           <ol class="lista-proceso">
-            <li><strong>Conocer la idea:</strong> entender el objetivo y el público.</li>
-            <li><strong>Organizar:</strong> definir la estructura y el contenido.</li>
-            <li><strong>Desarrollar:</strong> construir y revisar la página.</li>
-            <li><strong>Publicar:</strong> comprobar el resultado final.</li>
+            <li>
+              <span>01</span>
+              <div>
+                <strong>Conocer la idea</strong>
+                <p>Entender el objetivo, el público y las necesidades principales.</p>
+              </div>
+            </li>
+            <li>
+              <span>02</span>
+              <div>
+                <strong>Organizar</strong>
+                <p>Definir la estructura, el contenido y la dirección visual.</p>
+              </div>
+            </li>
+            <li>
+              <span>03</span>
+              <div>
+                <strong>Desarrollar</strong>
+                <p>Construir la página y revisar su funcionamiento en distintos tamaños.</p>
+              </div>
+            </li>
+            <li>
+              <span>04</span>
+              <div>
+                <strong>Publicar</strong>
+                <p>Comprobar el resultado final y dejar el sitio listo para compartir.</p>
+              </div>
+            </li>
           </ol>
         </div>
       </section>
 
       <section id="cotizacion" class="seccion seccion-alternativa">
-        <div class="contenedor bloque-cotizacion">
-          <p class="etiqueta">Próxima función</p>
-          <h2>Calculadora de cotización.</h2>
-          <p>
-            En una versión posterior se agregará una calculadora interactiva para
-            generar una estimación orientativa del proyecto.
-          </p>
+        <div class="contenedor">
+          <div class="encabezado-seccion">
+            <div>
+              <p class="etiqueta">06 · Cotización</p>
+              <h2>Calculá una primera estimación.</h2>
+            </div>
+            <p>
+              Elegí las características principales de tu proyecto para obtener
+              un valor orientativo antes de contactarme.
+            </p>
+          </div>
+
+          <div class="calculadora-cotizacion">
+            <form id="formulario-cotizacion" class="formulario-cotizacion">
+              <fieldset>
+                <legend>Base del proyecto</legend>
+                <div class="cuadricula-campos-cotizacion">
+                  <div class="campo-formulario">
+                    <label for="tipo-pagina">Tipo de página</label>
+                    <select id="tipo-pagina" name="tipoPagina">
+                      <option value="landing">Landing page</option>
+                      <option value="portfolio">Portafolio personal</option>
+                      <option value="presentacion">Web de presentación</option>
+                      <option value="personalizada">Página personalizada</option>
+                    </select>
+                  </div>
+
+                  <div class="campo-formulario">
+                    <label for="cantidad-secciones">Cantidad de secciones</label>
+                    <input id="cantidad-secciones" name="secciones" type="number" min="1" max="15" value="5">
+                  </div>
+
+                  <div class="campo-formulario">
+                    <label for="horas-estimadas">Horas estimadas</label>
+                    <input id="horas-estimadas" name="horas" type="number" min="0" max="300" value="15">
+                  </div>
+
+                  <div class="campo-formulario">
+                    <label for="nivel-urgencia">Nivel de urgencia</label>
+                    <select id="nivel-urgencia" name="urgencia">
+                      <option value="normal">Tiempo normal</option>
+                      <option value="prioridad">Entrega prioritaria</option>
+                      <option value="urgente">Entrega urgente</option>
+                    </select>
+                  </div>
+                </div>
+              </fieldset>
+
+              <fieldset>
+                <legend>Funcionalidades</legend>
+                <div class="opciones-cotizacion">
+                  <label class="opcion-cotizacion">
+                    <input type="checkbox" name="funcionalidades" value="htmlCss" checked>
+                    <span><strong>HTML y CSS</strong><small>Estructura y estilos personalizados.</small></span>
+                  </label>
+
+                  <label class="opcion-cotizacion">
+                    <input type="checkbox" name="funcionalidades" value="responsive" checked>
+                    <span><strong>Diseño responsive</strong><small>Adaptación para computadora, tablet y celular.</small></span>
+                  </label>
+
+                  <label class="opcion-cotizacion">
+                    <input type="checkbox" name="funcionalidades" value="javascript">
+                    <span><strong>JavaScript</strong><small>Interacciones y comportamiento dinámico.</small></span>
+                  </label>
+
+                  <label class="opcion-cotizacion">
+                    <input type="checkbox" name="funcionalidades" value="formulario">
+                    <span><strong>Formularios</strong><small>Contacto, consultas o toma de datos.</small></span>
+                  </label>
+
+                  <label class="opcion-cotizacion">
+                    <input type="checkbox" name="funcionalidades" value="animaciones">
+                    <span><strong>Animaciones</strong><small>Efectos visuales suaves y personalizados.</small></span>
+                  </label>
+
+                  <label class="opcion-cotizacion">
+                    <input type="checkbox" name="funcionalidades" value="integraciones">
+                    <span><strong>Integraciones externas</strong><small>Mapas, calendarios u otros servicios.</small></span>
+                  </label>
+
+                  <label class="opcion-cotizacion">
+                    <input type="checkbox" name="funcionalidades" value="tresD">
+                    <span><strong>Elemento 3D</strong><small>Modelo o personaje integrado en la página.</small></span>
+                  </label>
+                </div>
+              </fieldset>
+
+              <fieldset>
+                <legend>Revisiones</legend>
+                <div class="campo-formulario campo-revisiones">
+                  <label for="revisiones-adicionales">Revisiones adicionales</label>
+                  <input id="revisiones-adicionales" name="revisiones" type="number" min="0" max="10" value="0">
+                  <small>La propuesta inicial ya incluye las revisiones básicas acordadas.</small>
+                </div>
+              </fieldset>
+
+              <div class="acciones-calculadora">
+                <button class="boton boton-principal" type="submit">Calcular estimación</button>
+                <button class="boton boton-secundario" type="reset">Restablecer</button>
+              </div>
+            </form>
+
+            <aside class="resultado-cotizacion" aria-labelledby="titulo-resultado">
+              <p class="etiqueta">Estimación orientativa</p>
+              <h3 id="titulo-resultado">Valor aproximado</h3>
+              <p id="precio-estimado" class="precio-estimado" aria-live="polite">US$ 0</p>
+              <ul id="desglose-cotizacion" class="desglose-cotizacion"></ul>
+              <p class="aviso-cotizacion">
+                Este resultado es una referencia. El precio definitivo se confirma
+                después de conocer todos los detalles y objetivos del proyecto.
+              </p>
+              <a class="boton boton-principal" href="#contacto">Consultar por mi proyecto</a>
+            </aside>
+          </div>
         </div>
       </section>
 
       <section id="contacto" class="seccion">
-        <div class="contenedor">
-          <p class="etiqueta">06 · Contacto</p>
-          <h2>Hablemos de tu proyecto.</h2>
-          <p>
-            Podés escribirme a
-            <a href="mailto:verdicodesoporte@gmail.com">verdicodesoporte@gmail.com</a>
-            o visitar mi perfil de GitHub.
-          </p>
-          <a class="boton boton-principal" href="https://github.com/verdibbq" target="_blank" rel="noopener noreferrer">Ver GitHub</a>
+        <div class="contenedor bloque-contacto">
+          <div class="informacion-contacto">
+            <p class="etiqueta">07 · Contacto</p>
+            <h2>Hablemos de tu proyecto.</h2>
+            <p>
+              Contame qué necesitás y podemos pensar juntos una página clara,
+              personal y adecuada para tu objetivo.
+            </p>
+
+            <div class="acciones-contacto">
+              <a class="boton boton-principal" href="mailto:verdicodesoporte@gmail.com">Enviar un correo</a>
+              <button id="boton-copiar-correo" class="boton boton-secundario" type="button" data-correo="verdicodesoporte@gmail.com">Copiar correo</button>
+              <a class="enlace-github" href="https://github.com/verdibbq" target="_blank" rel="noopener noreferrer">Ver perfil de GitHub ↗</a>
+              <p id="mensaje-copia" class="mensaje-copia" aria-live="polite">verdicodesoporte@gmail.com</p>
+            </div>
+          </div>
+
+          <form id="formulario-contacto" class="formulario-contacto" novalidate>
+            <div class="campo-formulario">
+              <label for="nombre-contacto">Nombre</label>
+              <input id="nombre-contacto" name="nombre" type="text" autocomplete="name" required>
+            </div>
+
+            <div class="campo-formulario">
+              <label for="correo-contacto">Correo</label>
+              <input id="correo-contacto" name="correo" type="email" autocomplete="email" required>
+            </div>
+
+            <div class="campo-formulario">
+              <label for="mensaje-contacto">¿Qué página necesitás?</label>
+              <textarea id="mensaje-contacto" name="mensaje" rows="5" required></textarea>
+            </div>
+
+            <button class="boton boton-principal" type="submit">Preparar consulta</button>
+            <p class="ayuda-formulario">
+              Al enviar se abrirá tu aplicación de correo. Este formulario no guarda datos.
+            </p>
+            <p id="mensaje-formulario" class="mensaje-formulario" aria-live="polite"></p>
+          </form>
         </div>
       </section>
     </main>
 
     <footer class="pie-pagina">
-      <div class="contenedor">
+      <div class="contenedor contenido-pie">
         <p><strong>Verdi.Code</strong> · Diseño y desarrollo web por Agustín.</p>
+        <a href="#inicio">Volver arriba ↑</a>
       </div>
     </footer>
   </body>

@@ -1,23 +1,25 @@
-# Verdi.Code — Día 5
+# Verdi.Code — Día 7
 
-Quinta versión del portafolio personal de Agustín.
+Séptima versión del portafolio personal de Agustín.
 
 ## Qué se agregó en esta versión
 
-- Filtros para mostrar todos los proyectos, el proyecto real o las maquetas.
-- Contador accesible que informa cuántos proyectos están visibles.
-- Botón para copiar el correo de contacto al portapapeles.
-- Mensaje de confirmación después de copiar el correo.
-- Formulario con nombre, correo y descripción del proyecto.
-- Validación de campos obligatorios antes de preparar la consulta.
-- Generación de un correo con los datos del formulario, sin usar backend.
-- Estilos responsive para los filtros y el formulario.
+- Aparición suave de títulos, tarjetas, pasos y formularios al hacer scroll.
+- Retrasos pequeños entre elementos para evitar que todo aparezca al mismo tiempo.
+- Movimiento tranquilo en el bloque visual del hero.
+- Luz violeta con una animación lenta en el fondo principal.
+- Cambio de color suave en los detalles decorativos del hero.
+- Línea animada debajo de los enlaces de navegación.
+- Microinteracciones en botones, tarjetas, imágenes y logo.
+- Respuesta visual cuando cambia el precio de la calculadora.
+- Barra superior que muestra el progreso de lectura de la página.
+- Compatibilidad con `prefers-reduced-motion`.
 
 ## Qué todavía no incluye
 
-- Calculadora funcional.
-- Animaciones avanzadas.
 - Personaje 3D.
+- Pagos o envío de presupuestos a un servidor.
+- Optimización final, SEO completo y publicación.
 
 ## Paleta principal
 
@@ -37,26 +39,31 @@ Los colores están centralizados dentro de `:root` al principio de `css/styles.c
 - `js/main.js`
 - `README.md`
 
-## Cómo funciona el formulario
+## Cómo funcionan las animaciones
 
-El formulario no envía ni guarda información en un servidor. JavaScript toma los
-datos ingresados y abre la aplicación de correo del visitante con el asunto y el
-mensaje ya preparados.
+JavaScript agrega la clase `animar-entrada` y utiliza `IntersectionObserver` para
+detectar cuándo un elemento entra en pantalla. En ese momento se agrega la clase
+`elemento-visible` y CSS realiza la transición.
+
+Si JavaScript no carga, el contenido sigue siendo visible. Si el dispositivo tiene
+activada la reducción de movimiento, las animaciones se desactivan automáticamente.
 
 ## Qué personalizar
 
-- El texto de confirmación que aparece al copiar el correo.
-- El asunto y el cuerpo del correo se editan al final de `js/main.js`.
-- Los nombres de los filtros y las categorías de cada proyecto.
-- El correo de destino si en el futuro creás una dirección nueva.
+- La duración de entrada dentro de `.js .animar-entrada`.
+- La distancia inicial definida con la propiedad `translate`.
+- Los tiempos de `flotar-detalle`, `respirar-luz` y `pulso-borde`.
+- La lista de elementos animados dentro de `js/main.js`.
 
 ## Qué probar
 
 - Abrí `index.html` con Live Server.
-- Probá los tres filtros y comprobá el contador de proyectos.
-- Copiá el correo usando Live Server o la versión publicada con HTTPS.
-- Intentá enviar el formulario vacío para revisar la validación.
-- Completá los tres campos y confirmá que se abra tu aplicación de correo.
-- Probá el formulario y los filtros en celular, tablet y escritorio.
-- Navegá por los controles usando la tecla Tab.
+- Recorré toda la página lentamente y observá las entradas de cada sección.
+- Confirmá que los efectos se ejecuten una sola vez.
+- Probá los estados hover del logo, botones, tarjetas e imágenes.
+- Cambiá valores en la calculadora y revisá la respuesta visual del precio.
+- Comprobá que la barra superior avance con el scroll.
+- Activá `prefers-reduced-motion` desde el sistema o las herramientas del navegador.
+- Revisá la página en celular, tablet y escritorio.
+
 
