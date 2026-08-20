@@ -133,14 +133,40 @@ const configuracionPrecios = {
   moneda: "USD",
   configuracionMoneda: "es-AR",
   tiposPagina: {
-    landing: { nombre: "Landing page", precioBase: 120 },
-    portfolio: { nombre: "Portafolio personal", precioBase: 180 },
-    presentacion: { nombre: "Web de presentación", precioBase: 220 },
-    personalizada: { nombre: "Página personalizada", precioBase: 300 },
+    landing: {
+      nombre: "Landing page",
+      precioBase: 120,
+      funcionalidadesIncluidas: ["htmlCss", "responsive", "formulario"],
+    },
+    portfolio: {
+      nombre: "Portafolio personal",
+      precioBase: 180,
+      funcionalidadesIncluidas: [
+        "htmlCss",
+        "responsive",
+        "javascript",
+        "formulario",
+        "animaciones",
+      ],
+    },
+    presentacion: {
+      nombre: "Web de presentación",
+      precioBase: 220,
+      funcionalidadesIncluidas: [
+        "htmlCss",
+        "responsive",
+        "javascript",
+        "formulario",
+      ],
+    },
+    personalizada: {
+      nombre: "Página personalizada",
+      precioBase: 300,
+      funcionalidadesIncluidas: ["htmlCss", "responsive", "javascript"],
+    },
   },
   seccionesIncluidas: 3,
   precioSeccionAdicional: 20,
-  tarifaHora: 10,
   funcionalidades: {
     htmlCss: { nombre: "HTML y CSS", precio: 90 },
     responsive: { nombre: "Diseño responsive", precio: 60 },
@@ -152,7 +178,7 @@ const configuracionPrecios = {
   },
   precioRevisionAdicional: 25,
   urgencias: {
-    normal: { nombre: "Tiempo normal", multiplicador: 1 },
+    normal: { nombre: "Tiempo flexible", multiplicador: 1 },
     prioridad: { nombre: "Entrega prioritaria", multiplicador: 1.2 },
     urgente: { nombre: "Entrega urgente", multiplicador: 1.45 },
   },
@@ -161,6 +187,11 @@ const configuracionPrecios = {
 const formularioCotizacion = document.querySelector("#formulario-cotizacion");
 const precioEstimado = document.querySelector("#precio-estimado");
 const desgloseCotizacion = document.querySelector("#desglose-cotizacion");
+const selectorTipoPagina = document.querySelector("#tipo-pagina");
+const opcionesFuncionalidades = document.querySelectorAll(
+  'input[name="funcionalidades"]'
+);
+const mensajeConfiguracion = document.querySelector("#mensaje-configuracion");
 const formatoMoneda = new Intl.NumberFormat(
   configuracionPrecios.configuracionMoneda,
   {
@@ -181,12 +212,30 @@ function agregarDetalleCotizacion(nombre, precio) {
   desgloseCotizacion.append(detalle);
 }
 
+function configurarFuncionalidadesPorTipo() {
+  const pagina = configuracionPrecios.tiposPagina[selectorTipoPagina.value];
+  const funcionalidadesIncluidas = pagina.funcionalidadesIncluidas;
+
+  opcionesFuncionalidades.forEach((opcion) => {
+    opcion.checked = funcionalidadesIncluidas.includes(opcion.value);
+  });
+
+  const nombresFuncionalidades = funcionalidadesIncluidas.map(
+    (clave) => configuracionPrecios.funcionalidades[clave].nombre
+  );
+
+  mensajeConfiguracion.textContent =
+    `${pagina.nombre} incluye automáticamente: ` +
+    `${nombresFuncionalidades.join(", ")}. Podés modificar las opciones.`;
+
+  calcularCotizacion();
+}
+
 function calcularCotizacion() {
   const datos = new FormData(formularioCotizacion);
   const tipoElegido = datos.get("tipoPagina");
   const pagina = configuracionPrecios.tiposPagina[tipoElegido];
   const secciones = Math.max(1, Number(datos.get("secciones")) || 1);
-  const horas = Math.max(0, Number(datos.get("horas")) || 0);
   const revisiones = Math.max(0, Number(datos.get("revisiones")) || 0);
   const urgenciaElegida = datos.get("urgencia");
   const urgencia = configuracionPrecios.urgencias[urgenciaElegida];
@@ -219,10 +268,6 @@ function calcularCotizacion() {
     agregarDetalleCotizacion(funcionalidad.nombre, funcionalidad.precio);
   });
 
-  const precioHoras = horas * configuracionPrecios.tarifaHora;
-  subtotal += precioHoras;
-  agregarDetalleCotizacion(`${horas} horas estimadas`, precioHoras);
-
   if (revisiones > 0) {
     const precioRevisiones =
       revisiones * configuracionPrecios.precioRevisionAdicional;
@@ -246,7 +291,13 @@ function calcularCotizacion() {
   precioEstimado.classList.add("precio-actualizado");
 }
 
-formularioCotizacion.addEventListener("input", calcularCotizacion);
+formularioCotizacion.addEventListener("input", (evento) => {
+  if (evento.target !== selectorTipoPagina) {
+    calcularCotizacion();
+  }
+});
+
+selectorTipoPagina.addEventListener("change", configurarFuncionalidadesPorTipo);
 
 formularioCotizacion.addEventListener("submit", (evento) => {
   evento.preventDefault();
@@ -254,10 +305,10 @@ formularioCotizacion.addEventListener("submit", (evento) => {
 });
 
 formularioCotizacion.addEventListener("reset", () => {
-  setTimeout(calcularCotizacion, 0);
+  setTimeout(configurarFuncionalidadesPorTipo, 0);
 });
 
-calcularCotizacion();
+configurarFuncionalidadesPorTipo();
 
 // Aparición suave de elementos al recorrer la página
 const elementosAnimados = document.querySelectorAll(

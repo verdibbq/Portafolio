@@ -84,14 +84,9 @@
               <p class="etiqueta">01 · Sobre mí</p>
               <h2>La persona detrás de Verdi.Code.</h2>
             </div>
-            <p>
-              Un servicio cercano, con comunicación directa y decisiones claras
-              durante todo el proyecto.
-            </p>
-          </div>
+            
           </div>
           <div class="dos-columnas">
-            <div class="texto-sobre-mi">
             <div class="texto-sobre-mi">
               <p>
                 Verdi.Code no es una empresa grande: soy yo, Agustín, trabajando
@@ -100,6 +95,10 @@
               <p>
                 Completé el curso de Desarrollo Web Flex en Coderhouse y sigo
                 mejorando mis conocimientos mediante proyectos prácticos.
+              </p>
+              <p>
+                Un servicio cercano, con comunicación directa y decisiones claras
+                durante todo el proyecto.
               </p>
             </div>
             <ul class="datos-personales">
@@ -119,12 +118,6 @@
               <p class="etiqueta">02 · Herramientas</p>
               <h2>Tecnologías que utilizo.</h2>
             </div>
-            <p>
-              Una base front-end enfocada en crear sitios ordenados, adaptables
-              y fáciles de mantener.
-            </p>
-          </div>
-          <div class="encabezado-seccion">
             <p>
               Una base front-end enfocada en crear sitios ordenados, adaptables
               y fáciles de mantener.
@@ -167,7 +160,6 @@
               necesitan comenzar o mejorar su presencia online.
             </p>
           </div>
-          </div>
           <div class="cuadricula-tarjetas tres-columnas">
             <article class="tarjeta tarjeta-servicio">
               <span class="icono-servicio" aria-hidden="true">↗</span>
@@ -187,7 +179,7 @@
                 <li>Identidad personalizada</li>
                 <li>Servicios y contacto</li>
                 <li>Diseño responsive</li>
-              </ul> 
+              </ul>
             </article>
             <article class="tarjeta tarjeta-servicio">
               <span class="icono-servicio" aria-hidden="true">+</span>
@@ -205,7 +197,6 @@
 
       <section id="proyectos" class="seccion seccion-alternativa">
         <div class="contenedor">
-
           <div class="encabezado-seccion">
             <div>
               <p class="etiqueta">04 · Proyectos</p>
@@ -248,6 +239,7 @@
                 </a>
               </div>
             </article>
+
             <article class="tarjeta-proyecto proyecto-fletesya" data-categoria="maqueta">
               <a class="vista-proyecto" href="https://verdibbq.github.io/FletesAddi/" target="_blank" rel="noopener noreferrer" aria-label="Abrir el proyecto FletesYA">
                 <img src="assets/images/fletesya.png" alt="Vista previa de la página FletesYA">
@@ -270,6 +262,7 @@
                 </a>
               </div>
             </article>
+
             <article class="tarjeta-proyecto proyecto-saludweb" data-categoria="maqueta">
               <a class="vista-proyecto" href="https://verdibbq.github.io/Psicologia/" target="_blank" rel="noopener noreferrer" aria-label="Abrir el proyecto SaludWeb">
                 <img src="assets/images/saludweb.png" alt="Vista previa de la página SaludWeb">
@@ -297,6 +290,7 @@
       </section>
 
       <section id="proceso" class="seccion">
+        <div class="contenedor">
           <div class="encabezado-seccion">
             <div>
               <p class="etiqueta">05 · Proceso</p>
@@ -374,14 +368,9 @@
                   </div>
 
                   <div class="campo-formulario">
-                    <label for="horas-estimadas">Horas estimadas</label>
-                    <input id="horas-estimadas" name="horas" type="number" min="0" max="300" value="15">
-                  </div>
-
-                  <div class="campo-formulario">
-                    <label for="nivel-urgencia">Nivel de urgencia</label>
-                    <select id="nivel-urgencia" name="urgencia">
-                      <option value="normal">Tiempo normal</option>
+                    <label for="tiempo-entrega">Tiempo de entrega</label>
+                    <select id="tiempo-entrega" name="urgencia">
+                      <option value="normal">Flexible / estándar</option>
                       <option value="prioridad">Entrega prioritaria</option>
                       <option value="urgente">Entrega urgente</option>
                     </select>
@@ -391,6 +380,9 @@
 
               <fieldset>
                 <legend>Funcionalidades</legend>
+                <p id="mensaje-configuracion" class="ayuda-configuracion" aria-live="polite">
+                  Landing page incluye HTML y CSS, diseño responsive y formulario. Podés modificar las opciones.
+                </p>
                 <div class="opciones-cotizacion">
                   <label class="opcion-cotizacion">
                     <input type="checkbox" name="funcionalidades" value="htmlCss" checked>
@@ -408,7 +400,7 @@
                   </label>
 
                   <label class="opcion-cotizacion">
-                    <input type="checkbox" name="funcionalidades" value="formulario">
+                    <input type="checkbox" name="funcionalidades" value="formulario" checked>
                     <span><strong>Formularios</strong><small>Contacto, consultas o toma de datos.</small></span>
                   </label>
 
@@ -505,7 +497,7 @@
 
     <footer class="pie-pagina">
       <div class="contenedor contenido-pie">
-        <p><strong>Verdi.Code</strong> · Made in Argentina</p>
+        <p><strong>Verdi.Code</strong> · Diseño y desarrollo web por Agustín.</p>
         <a href="#inicio">Volver arriba ↑</a>
       </div>
     </footer>
