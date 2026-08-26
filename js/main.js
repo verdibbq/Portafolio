@@ -319,6 +319,58 @@ const reducirMovimiento = window.matchMedia(
   "(prefers-reduced-motion: reduce)"
 ).matches;
 
+// Personaje 3D: animación tranquila y un saludo al presionar el botón
+const personajeVerdi = document.querySelector("#personaje-verdi");
+const botonSaludarZorro = document.querySelector("#boton-saludar-zorro");
+const ayudaPersonaje = document.querySelector("#ayuda-personaje");
+let saludoActivo = false;
+
+function reproducirSaludoZorro() {
+  if (!personajeVerdi || !personajeVerdi.loaded || saludoActivo) {
+    return;
+  }
+
+  saludoActivo = true;
+  personajeVerdi.animationName = "Saludo";
+  personajeVerdi.currentTime = 0;
+  personajeVerdi.play({ repetitions: 1 });
+  botonSaludarZorro.disabled = true;
+  ayudaPersonaje.textContent = "El zorro te está saludando.";
+}
+
+personajeVerdi?.addEventListener("load", () => {
+  botonSaludarZorro.disabled = false;
+
+  if (reducirMovimiento) {
+    personajeVerdi.pause();
+  }
+});
+
+personajeVerdi?.addEventListener("finished", () => {
+  if (!saludoActivo) {
+    return;
+  }
+
+  saludoActivo = false;
+  personajeVerdi.animationName = "Reposo";
+  personajeVerdi.currentTime = 0;
+
+  if (!reducirMovimiento) {
+    personajeVerdi.play();
+  }
+
+  botonSaludarZorro.disabled = false;
+  ayudaPersonaje.textContent = "Arrastralo para mirarlo o volvé a saludarlo.";
+});
+
+personajeVerdi?.addEventListener("error", () => {
+  botonSaludarZorro.hidden = true;
+  ayudaPersonaje.textContent =
+    "Se muestra la imagen alternativa.";
+});
+
+botonSaludarZorro?.addEventListener("click", reproducirSaludoZorro);
+
 elementosAnimados.forEach((elemento, indice) => {
   elemento.classList.add("animar-entrada");
   elemento.style.setProperty("--demora", `${(indice % 4) * 70}ms`);

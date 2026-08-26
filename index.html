@@ -11,6 +11,10 @@
     <title>Verdi.Code | Portafolio de Agustín</title>
     <link rel="icon" type="image/png" href="assets/images/verdi-code-logo.png">
     <link rel="stylesheet" href="css/styles.css">
+    <script
+      type="module"
+      src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.3.1/model-viewer.min.js"
+    ></script>
     <script src="js/main.js" defer></script>
   </head>
 
@@ -69,10 +73,51 @@
             </div>
           </div>
 
-          <div class="detalle-inicio" aria-hidden="true">
-            <span>&lt;V/&gt;</span>
-            <p>Verdi.Code</p>
-            <small>Diseño + desarrollo</small>
+          <div class="personaje-inicio">
+            <span class="halo-personaje" aria-hidden="true"></span>
+            <model-viewer
+              id="personaje-verdi"
+              class="modelo-zorro"
+              src="assets/modelos/zorro-verdi-animado.glb"
+              poster="assets/images/zorro-verdi-poster.png"
+              alt="Zorro Verdi.Code"
+              animation-name="Reposo"
+              animation-crossfade-duration="260"
+              autoplay
+              camera-controls
+              disable-pan
+              disable-zoom
+              touch-action="pan-y"
+              interaction-prompt="none"
+              loading="eager"
+              reveal="auto"
+              shadow-intensity="0.75"
+              shadow-softness="0.9"
+              exposure="0.95"
+              camera-target="0m 0.55m 0m"
+              camera-orbit="0deg 82deg 145%"
+              min-camera-orbit="auto 68deg 145%"
+              max-camera-orbit="auto 92deg 145%"
+            >
+              <img
+                class="alternativa-modelo"
+                slot="poster"
+                src="assets/images/zorro-verdi-poster.png"
+                alt="zorro modelo 3d"
+              >
+            </model-viewer>
+            <button
+              id="boton-saludar-zorro"
+              class="boton-saludar-zorro"
+              type="button"
+              aria-describedby="ayuda-personaje"
+              disabled
+            >
+              Saludar al zorro
+            </button>
+            <p id="ayuda-personaje" class="ayuda-personaje" aria-live="polite">
+              Arrastralo para mirarlo o tocá el botón para que salude.
+            </p>
           </div>
         </div>
       </section>
@@ -84,7 +129,10 @@
               <p class="etiqueta">01 · Sobre mí</p>
               <h2>La persona detrás de Verdi.Code.</h2>
             </div>
-            
+            <p>
+              Un servicio cercano, con comunicación directa y decisiones claras
+              durante todo el proyecto.
+            </p>
           </div>
           <div class="dos-columnas">
             <div class="texto-sobre-mi">
@@ -95,10 +143,6 @@
               <p>
                 Completé el curso de Desarrollo Web Flex en Coderhouse y sigo
                 mejorando mis conocimientos mediante proyectos prácticos.
-              </p>
-              <p>
-                Un servicio cercano, con comunicación directa y decisiones claras
-                durante todo el proyecto.
               </p>
             </div>
             <ul class="datos-personales">
