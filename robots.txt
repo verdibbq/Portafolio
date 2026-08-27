@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://verdibbq.github.io/Portafolio/sitemap.xml

@@ -35,7 +35,9 @@ enlacesMenu.forEach((enlace) => {
 });
 
 document.addEventListener("keydown", (evento) => {
-  if (evento.key === "Escape") {
+  const menuEstaAbierto = botonMenu.getAttribute("aria-expanded") === "true";
+
+  if (evento.key === "Escape" && menuEstaAbierto) {
     cerrarMenu();
     botonMenu.focus();
   }
@@ -323,7 +325,27 @@ const reducirMovimiento = window.matchMedia(
 const personajeVerdi = document.querySelector("#personaje-verdi");
 const botonSaludarZorro = document.querySelector("#boton-saludar-zorro");
 const ayudaPersonaje = document.querySelector("#ayuda-personaje");
+const DURACION_SALUDO = 1800;
 let saludoActivo = false;
+let temporizadorSaludo;
+
+function finalizarSaludoZorro() {
+  if (!personajeVerdi || !saludoActivo) {
+    return;
+  }
+
+  clearTimeout(temporizadorSaludo);
+  saludoActivo = false;
+  personajeVerdi.animationName = "Reposo";
+  personajeVerdi.currentTime = 0;
+
+  if (!reducirMovimiento) {
+    personajeVerdi.play();
+  }
+
+  botonSaludarZorro.disabled = false;
+  ayudaPersonaje.textContent = "Arrastralo para mirarlo o volvé a saludarlo.";
+}
 
 function reproducirSaludoZorro() {
   if (!personajeVerdi || !personajeVerdi.loaded || saludoActivo) {
@@ -336,6 +358,7 @@ function reproducirSaludoZorro() {
   personajeVerdi.play({ repetitions: 1 });
   botonSaludarZorro.disabled = true;
   ayudaPersonaje.textContent = "El zorro te está saludando.";
+  temporizadorSaludo = setTimeout(finalizarSaludoZorro, DURACION_SALUDO);
 }
 
 personajeVerdi?.addEventListener("load", () => {
@@ -347,20 +370,7 @@ personajeVerdi?.addEventListener("load", () => {
 });
 
 personajeVerdi?.addEventListener("finished", () => {
-  if (!saludoActivo) {
-    return;
-  }
-
-  saludoActivo = false;
-  personajeVerdi.animationName = "Reposo";
-  personajeVerdi.currentTime = 0;
-
-  if (!reducirMovimiento) {
-    personajeVerdi.play();
-  }
-
-  botonSaludarZorro.disabled = false;
-  ayudaPersonaje.textContent = "Arrastralo para mirarlo o volvé a saludarlo.";
+  finalizarSaludoZorro();
 });
 
 personajeVerdi?.addEventListener("error", () => {

@@ -1,52 +1,44 @@
 # Verdi.Code
 
-Versión 0.8 del portafolio 
+Versión final de mi portafolio personal Verdi.Code.
 
-## Personaje 3D
+Sitio publicado: <https://verdibbq.github.io/Portafolio/>
 
-- Zorro low poly construido con blender.
-- Naranja zorro luminoso, hocico y punta de cola crema, ojos y nariz negros.
-- Animación `Reposo`: movimiento leve de cabeza, orejas, cuerpo y cola.
-- Animación `Saludo`: movimiento más marcado al presionar el botón.
+## Tecnologías
 
-## Corrección de la calculadora
+- HTML semántico.
+- CSS responsive con Flexbox y Grid.
+- JavaScript puro.
+- Modelo 3D creado y animado con blender.
 
-- Se eliminó completamente el cálculo por horas.
-- El tiempo de entrega ahora modifica el subtotal mediante un multiplicador.
-- Cada tipo de página selecciona automáticamente funcionalidades recomendadas.
-- Landing page incluye HTML y CSS, responsive y formulario.
-- Portafolio incluye HTML y CSS, responsive, JavaScript, formulario y animaciones.
-- Web de presentación incluye HTML y CSS, responsive, JavaScript y formulario.
-- Página personalizada comienza con HTML y CSS, responsive y JavaScript.
-- Las opciones automáticas pueden modificarse manualmente.
-- El botón Restablecer recupera la configuración recomendada de Landing page.
+## Funciones principales
 
-## Qué se agregó en esta versión
+- Menú adaptable para computadora, tablet y celular.
+- Presentación, habilidades, servicios, proyectos y proceso de trabajo.
+- Filtros para proyectos reales y maquetas.
+- Calculadora de cotización orientativa.
+- Formulario que prepara una consulta mediante correo electrónico.
+- Botón para copiar el correo de contacto.
+- Animaciones suaves.
+- Zorro 3D con animaciones.
 
-- Aparición suave de títulos, tarjetas, pasos y formularios al hacer scroll.
-- Retrasos pequeños entre elementos para evitar que todo aparezca al mismo tiempo.
-- Movimiento tranquilo en el bloque visual del hero.
-- Luz violeta con una animación lenta en el fondo principal.
-- Cambio de color suave en los detalles decorativos del hero.
-- Línea animada debajo de los enlaces de navegación.
-- Microinteracciones en botones, tarjetas, imágenes y logo.
-- Respuesta visual cuando cambia el precio de la calculadora.
-- Barra superior que muestra el progreso de lectura de la página.
-- Compatibilidad con `prefers-reduced-motion`.
 
-## Qué todavía no incluye
+## La estimación no representa un presupuesto definitivo.
 
-- Personaje 3D.
-- Pagos o envío de presupuestos a un servidor.
-- Optimización final, SEO completo y publicación.
+## Accesibilidad, rendimiento y SEO
 
-## Paleta principal
+- Enlace para saltar directamente al contenido principal.
+- Navegación y formularios utilizables con teclado.
+- Mensajes dinámicos anunciados a tecnologías de asistencia.
+- Texto alternativo y dimensiones definidas en las imágenes.
+- Capturas de proyectos cargadas de forma diferida.
+- Imagen alternativa si el modelo 3D no puede cargarse.
+- Metadatos para buscadores y redes sociales.
 
-- Violeta: `#8b5cf6`
-- Violeta claro: `#b9a0ff`
-- Naranja zorro: `#f0823f`
-- Fondo: `#100d17`
-- Superficie: `#211a2b`
-- Texto: `#f7f3fb`
+## Limitaciones actuales
 
+- No procesa pagos.
+- No tiene backend ni base de datos.
+- El formulario abre la aplicación de correo del visitante.
+- La cotización es únicamente orientativa.
 

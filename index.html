@@ -3,26 +3,82 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Agustín">
+    <meta name="robots" content="index, follow">
     <meta
       name="description"
-      content="Portafolio de Agustín, desarrollador front-end y creador de Verdi.Code."
+      content="Portafolio de Agustín, creador de Verdi.Code. Diseño y desarrollo de páginas web claras, personalizadas y responsive."
     >
     <meta name="theme-color" content="#100d17">
+    <link rel="canonical" href="https://verdibbq.github.io/Portafolio/">
+
+    <meta property="og:locale" content="es_AR">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Verdi.Code | Portafolio de Agustín">
+    <meta
+      property="og:description"
+      content="Diseño y desarrollo de páginas web claras, personalizadas y responsive."
+    >
+    <meta property="og:url" content="https://verdibbq.github.io/Portafolio/">
+    <meta
+      property="og:image"
+      content="https://verdibbq.github.io/Portafolio/assets/images/verdi-code-logo.png"
+    >
+    <meta property="og:image:alt" content="Logo de Verdi.Code">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Verdi.Code | Portafolio de Agustín">
+    <meta
+      name="twitter:description"
+      content="Diseño y desarrollo de páginas web claras, personalizadas y responsive."
+    >
+    <meta
+      name="twitter:image"
+      content="https://verdibbq.github.io/Portafolio/assets/images/verdi-code-logo.png"
+    >
+    <meta name="twitter:image:alt" content="Logo de Verdi.Code">
+
     <title>Verdi.Code | Portafolio de Agustín</title>
     <link rel="icon" type="image/png" href="assets/images/verdi-code-logo.png">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://ajax.googleapis.com" crossorigin>
     <script
       type="module"
       src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.3.1/model-viewer.min.js"
     ></script>
     <script src="js/main.js" defer></script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Agustín",
+        "url": "https://verdibbq.github.io/Portafolio/",
+        "email": "mailto:verdicodesoporte@gmail.com",
+        "jobTitle": "Desarrollador front-end",
+        "brand": {
+          "@type": "Brand",
+          "name": "Verdi.Code"
+        },
+        "sameAs": ["https://github.com/verdibbq"]
+      }
+    </script>
   </head>
 
   <body>
+    <a class="enlace-saltar" href="#contenido-principal">Saltar al contenido</a>
+
     <header class="encabezado-principal">
       <div class="contenedor barra-navegacion">
         <a class="marca" href="#inicio" aria-label="Verdi.Code, ir al inicio">
-          <img class="marca-logo" src="assets/images/verdi-code-logo.png" alt="Verdi.Code">
+          <img
+            class="marca-logo"
+            src="assets/images/verdi-code-logo.png"
+            width="1254"
+            height="1254"
+            alt="Verdi.Code"
+            decoding="async"
+            fetchpriority="high"
+          >
         </a>
 
         <button
@@ -57,7 +113,7 @@
       </div>
     </header>
 
-    <main>
+    <main id="contenido-principal">
       <section id="inicio" class="seccion-inicio">
         <div class="contenedor inicio-contenido">
           <div class="inicio-texto">
@@ -103,7 +159,10 @@
                 class="alternativa-modelo"
                 slot="poster"
                 src="assets/images/zorro-verdi-poster.png"
-                alt="zorro modelo 3d"
+                width="1468"
+                height="1468"
+                alt="Zorro naranja de Verdi.Code mirando de frente"
+                decoding="async"
               >
             </model-viewer>
             <button
@@ -188,6 +247,16 @@
               <h3>Git y GitHub</h3>
               <p>Versionado y publicación de proyectos.</p>
             </article>
+            <article class="tarjeta tarjeta-habilidad">
+              <span class="numero-tarjeta">05</span>
+              <h3>Blender</h3>
+              <p>Creacion de modelos para proyectos.</p>
+            </article>
+            <article class="tarjeta tarjeta-habilidad">
+              <span class="numero-tarjeta">06</span>
+              <h3>Marketing</h3>
+              <p>Crear imagenes o contenido para paginas con photoshop/canva</p>
+            </article>
           </div>
         </div>
       </section>
@@ -253,7 +322,7 @@
           </div>
 
           <div class="barra-filtros">
-            <div class="filtros-proyectos" aria-label="Filtrar proyectos">
+            <div class="filtros-proyectos" role="group" aria-label="Filtrar proyectos">
               <button class="filtro-proyecto activo" type="button" data-filtro="todos" aria-pressed="true">Todos</button>
               <button class="filtro-proyecto" type="button" data-filtro="real" aria-pressed="false">Proyecto real</button>
               <button class="filtro-proyecto" type="button" data-filtro="maqueta" aria-pressed="false">Maquetas</button>
@@ -264,7 +333,14 @@
           <div class="cuadricula-proyectos">
             <article class="tarjeta-proyecto tarjeta-proyecto-destacado" data-categoria="real">
               <a class="vista-proyecto" href="https://verdibbq.github.io/maddi-sv-/" target="_blank" rel="noopener noreferrer" aria-label="Abrir el proyecto Maddi Server">
-                <img src="assets/images/maddi-server.webp" alt="Vista previa de la página de Maddi Server">
+                <img
+                  src="assets/images/maddi-server.webp"
+                  width="1342"
+                  height="643"
+                  alt="Vista previa de la página de Maddi Server"
+                  loading="lazy"
+                  decoding="async"
+                >
               </a>
               <div class="contenido-proyecto">
                 <p class="tipo-proyecto">Proyecto real · Minecraft</p>
@@ -286,7 +362,14 @@
 
             <article class="tarjeta-proyecto proyecto-fletesya" data-categoria="maqueta">
               <a class="vista-proyecto" href="https://verdibbq.github.io/FletesAddi/" target="_blank" rel="noopener noreferrer" aria-label="Abrir el proyecto FletesYA">
-                <img src="assets/images/fletesya.png" alt="Vista previa de la página FletesYA">
+                <img
+                  src="assets/images/fletesya.png"
+                  width="1894"
+                  height="917"
+                  alt="Vista previa de la página FletesYA"
+                  loading="lazy"
+                  decoding="async"
+                >
               </a>
               <div class="contenido-proyecto">
                 <p class="tipo-proyecto">Maqueta funcional · Transporte</p>
@@ -309,7 +392,14 @@
 
             <article class="tarjeta-proyecto proyecto-saludweb" data-categoria="maqueta">
               <a class="vista-proyecto" href="https://verdibbq.github.io/Psicologia/" target="_blank" rel="noopener noreferrer" aria-label="Abrir el proyecto SaludWeb">
-                <img src="assets/images/saludweb.png" alt="Vista previa de la página SaludWeb">
+                <img
+                  src="assets/images/saludweb.png"
+                  width="1920"
+                  height="922"
+                  alt="Vista previa de la página SaludWeb"
+                  loading="lazy"
+                  decoding="async"
+                >
               </a>
               <div class="contenido-proyecto">
                 <p class="tipo-proyecto">Maqueta funcional · Salud</p>
@@ -469,8 +559,16 @@
                 <legend>Revisiones</legend>
                 <div class="campo-formulario campo-revisiones">
                   <label for="revisiones-adicionales">Revisiones adicionales</label>
-                  <input id="revisiones-adicionales" name="revisiones" type="number" min="0" max="10" value="0">
-                  <small>La propuesta inicial ya incluye las revisiones básicas acordadas.</small>
+                  <input
+                    id="revisiones-adicionales"
+                    name="revisiones"
+                    type="number"
+                    min="0"
+                    max="10"
+                    value="0"
+                    aria-describedby="ayuda-revisiones"
+                  >
+                  <small id="ayuda-revisiones">La propuesta inicial ya incluye las revisiones básicas acordadas.</small>
                 </div>
               </fieldset>
 
