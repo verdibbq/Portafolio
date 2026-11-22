@@ -137,12 +137,12 @@ const configuracionPrecios = {
   tiposPagina: {
     landing: {
       nombre: "Landing page",
-      precioBase: 120,
+      precioBase: 60,
       funcionalidadesIncluidas: ["htmlCss", "responsive", "formulario"],
     },
     portfolio: {
       nombre: "Portafolio personal",
-      precioBase: 180,
+      precioBase: 250,
       funcionalidadesIncluidas: [
         "htmlCss",
         "responsive",
@@ -153,7 +153,7 @@ const configuracionPrecios = {
     },
     presentacion: {
       nombre: "Web de presentación",
-      precioBase: 220,
+      precioBase: 120,
       funcionalidadesIncluidas: [
         "htmlCss",
         "responsive",
@@ -167,22 +167,22 @@ const configuracionPrecios = {
       funcionalidadesIncluidas: ["htmlCss", "responsive", "javascript"],
     },
   },
-  seccionesIncluidas: 3,
+  seccionesIncluidas: 2,
   precioSeccionAdicional: 20,
   funcionalidades: {
-    htmlCss: { nombre: "HTML y CSS", precio: 90 },
-    responsive: { nombre: "Diseño responsive", precio: 60 },
-    javascript: { nombre: "JavaScript", precio: 75 },
-    formulario: { nombre: "Formularios", precio: 45 },
-    animaciones: { nombre: "Animaciones", precio: 55 },
+    htmlCss: { nombre: "HTML y CSS", precio: 50 },
+    responsive: { nombre: "Diseño responsive", precio: 20 },
+    javascript: { nombre: "JavaScript", precio: 50 },
+    formulario: { nombre: "Formularios", precio: 15 },
+    animaciones: { nombre: "Animaciones", precio: 35 },
     integraciones: { nombre: "Integraciones externas", precio: 70 },
-    tresD: { nombre: "Elemento 3D", precio: 240 },
+    tresD: { nombre: "Elemento 3D", precio: 70 },
   },
   precioRevisionAdicional: 25,
   urgencias: {
     normal: { nombre: "Tiempo flexible", multiplicador: 1 },
     prioridad: { nombre: "Entrega prioritaria", multiplicador: 1.2 },
-    urgente: { nombre: "Entrega urgente", multiplicador: 1.45 },
+    urgente: { nombre: "Entrega urgente", multiplicador: 1.85 },
   },
 };
 
