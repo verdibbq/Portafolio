@@ -126,7 +126,7 @@ formularioContacto.addEventListener("submit", (evento) => {
   );
 
   mensajeFormulario.textContent = "Abriendo tu aplicación de correo...";
-  window.location.href = `mailto:verdicodesoporte@gmail.com?subject=${asunto}&body=${cuerpo}`;
+  window.location.href = `mailto:vagusfvestudio@gmail.com?subject=${asunto}&body=${cuerpo}`;
 });
 
 // Calculadora de cotización
