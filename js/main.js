@@ -106,7 +106,9 @@ botonCopiarCorreo.addEventListener("click", async () => {
 const formularioContacto = document.querySelector("#formulario-contacto");
 const mensajeFormulario = document.querySelector("#mensaje-formulario");
 
-formularioContacto.addEventListener("submit", (evento) => {
+const URL_FORMULARIO = "https://formspree.io/f/TU_CODIGO";
+
+formularioContacto.addEventListener("submit", async (evento) => {
   evento.preventDefault();
   formularioContacto.classList.add("formulario-revisado");
 
@@ -116,17 +118,28 @@ formularioContacto.addEventListener("submit", (evento) => {
     return;
   }
 
-  const datos = new FormData(formularioContacto);
-  const nombre = datos.get("nombre");
-  const correo = datos.get("correo");
-  const mensaje = datos.get("mensaje");
-  const asunto = encodeURIComponent(`Consulta web de ${nombre}`);
-  const cuerpo = encodeURIComponent(
-    `Hola Agustín, soy ${nombre}.\n\n${mensaje}\n\nMi correo de contacto es: ${correo}`
-  );
+  const botonEnviar = formularioContacto.querySelector('button[type="submit"]');
+  botonEnviar.disabled = true;
+  mensajeFormulario.textContent = "Enviando...";
 
-  mensajeFormulario.textContent = "Abriendo tu aplicación de correo...";
-  window.location.href = `mailto:vagusfvestudio@gmail.com?subject=${asunto}&body=${cuerpo}`;
+  try {
+    const respuesta = await fetch(URL_FORMULARIO, {
+      method: "POST",
+      headers: { Accept: "application/json" },
+      body: new FormData(formularioContacto),
+    });
+
+    if (!respuesta.ok) throw new Error("Error al enviar");
+
+    mensajeFormulario.textContent = "¡Mensaje enviado! Te respondo pronto.";
+    formularioContacto.reset();
+    formularioContacto.classList.remove("formulario-revisado");
+  } catch (error) {
+    mensajeFormulario.textContent =
+      "No se pudo enviar. Escribime a verdicodesoporte@gmail.com";
+  } finally {
+    botonEnviar.disabled = false;
+  }
 });
 
 // Calculadora de cotización
