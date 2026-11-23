@@ -106,7 +106,7 @@ botonCopiarCorreo.addEventListener("click", async () => {
 const formularioContacto = document.querySelector("#formulario-contacto");
 const mensajeFormulario = document.querySelector("#mensaje-formulario");
 
-const URL_FORMULARIO = "https://formspree.io/f/TU_CODIGO";
+const URL_FORMULARIO = "https://formspree.io/f/xyewbpkp";
 
 formularioContacto.addEventListener("submit", async (evento) => {
   evento.preventDefault();
@@ -136,7 +136,7 @@ formularioContacto.addEventListener("submit", async (evento) => {
     formularioContacto.classList.remove("formulario-revisado");
   } catch (error) {
     mensajeFormulario.textContent =
-      "No se pudo enviar. Escribime a verdicodesoporte@gmail.com";
+      "No se pudo enviar. Escribime a verdicodesupport@gmail.com";
   } finally {
     botonEnviar.disabled = false;
   }
